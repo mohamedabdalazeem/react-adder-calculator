@@ -126,7 +126,9 @@ select {
 
 @media screen and (max-width:1055px) {
     .result{
+        width: 100%;
         height: 20vh; 
+        margin: 5px;
     }
     .row{
         padding-bottom: 10px;
