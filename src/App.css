@@ -1,0 +1,131 @@
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: #05445E;
+    background-image: url('./assets/bg2.jpeg');
+    background-size: cover;
+}
+
+.adder-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.no-rows-para{
+    font-size: 20px;
+}
+
+.add-row-btn {
+    margin: 30px 0px;
+    padding: 20px;
+    background-color: #189AB4;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    min-width: 200px;
+    font-size: 17px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.add-row-btn:hover{
+    background-color: #077086;
+}
+
+.row {
+    margin: 3px;
+}
+
+.row > * {
+    font-size: 15px;
+    margin: 4px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    box-shadow: 2px 2px 4px gray;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.result{
+    width: 50%;
+    height: 70vh; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+.result-h3 {
+    background-color: #e2d7d9a2;
+    min-width: 180px;
+    padding: 20px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.disable-btn{
+    cursor: pointer;
+}
+
+.disabled {
+    background-color: rgb(205, 202, 202);
+}
+
+.disable-btn:hover{
+    background-color: #189AB4;
+    color: white;
+}
+
+.disabled-input{
+    background-color: rgb(205, 202, 202);
+}
+
+
+input{
+    background-color: rgb(252, 230, 202);
+}
+
+select {
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+    cursor: pointer;
+}
+
+.plus{
+    background-color: #189AB4;
+    color: white;
+}
+.minus {
+    background-color: #7e9ca2;
+    color: white;
+}
+ option {
+    background-color: white;
+    color: black;
+} 
+
+.delete-btn {
+    color: #A4031F;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #189AB4;
+    color: white;
+}
+
+@media screen and (max-width:1055px) {
+    .result{
+        height: 20vh; 
+    }
+    .row{
+        padding-bottom: 10px;
+    }
+}
