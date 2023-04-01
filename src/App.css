@@ -1,7 +1,6 @@
 
 body {
     font-family:'Courier New', Courier, monospace;
-    background-color: #05445E;
     background-image: url('./assets/bg2.jpeg');
     background-size: cover;
 }
@@ -25,6 +24,7 @@ body {
     font-family:'Courier New', Courier, monospace;
     min-width: 200px;
     font-size: 17px;
+    font-weight: bold;
     border-radius: 20px;
     border: none;
     cursor: pointer;
@@ -44,6 +44,7 @@ body {
     margin: 4px;
     border-radius: 20px;
     border: none;
+    font-weight: bold;
     padding: 20px;
     box-shadow: 2px 2px 4px gray;
     font-family:'Courier New', Courier, monospace;
@@ -61,7 +62,8 @@ body {
 
 .result-h3 {
     background-color: #e2d7d9a2;
-    min-width: 180px;
+    min-width: 200px;
+    margin: 4px;
     padding: 20px;
     border-radius: 20px;
     color: black;
@@ -70,6 +72,7 @@ body {
 
 .disable-btn{
     cursor: pointer;
+    
 }
 
 .disabled {
