@@ -1,21 +1,23 @@
 import { useState } from 'react'
 import './App.css'
+import { nanoid } from 'nanoid'
 import Row from './components/Row'
 import gifImg from './assets/giphy.webp'
 
 function App() {
 
-  const [rows, setRows] = useState([{index:0, sign: '+', number: 0, enabled: true}])
+  const [rows, setRows] = useState([{id:0, sign: '+', number: 0, enabled: true}])
 
   const addRow = () => {
-    const newIndex = rows.length
-    setRows([...rows,{index:newIndex, sign: '+', number: 0, enabled: true}])
+    const newId = nanoid()
+    setRows([...rows,{id:newId, sign: '+', number: 0, enabled: true}])
+    console.log(rows)
   }
-  const handleRowRemove = (index) => {
-    setRows(rows.filter(row => row.index !== index))
+  const handleRowRemove = (id) => {
+    setRows(rows.filter(row => row.id !== id))
   }
   const handleRowUpdate = (updatedRow) => {
-    setRows(rows.map((row) => row.index === updatedRow.index ? updatedRow : row))
+    setRows(rows.map((row) => row.id === updatedRow.id ? updatedRow : row))
   }
   const sum = rows.reduce((acc, row) => {
     if(row.enabled){
@@ -37,7 +39,7 @@ function App() {
       </div> }
      { rows.map(row => {
       return(
-      <Row key={row.index} index={row.index} onUpdate={handleRowUpdate} onRemove={handleRowRemove} />
+      <Row key={row.id} id={row.id} onUpdate={handleRowUpdate} onRemove={handleRowRemove} />
      )})}
      </div>
      <div className='result'>

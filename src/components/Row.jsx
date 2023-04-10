@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 
 
-const Row = ({index, onUpdate, onRemove}) => {
+const Row = ({id, onUpdate, onRemove}) => {
 const [number, setNumber] = useState(0)
 const [sign, setSign] = useState('+')
 const [enabled, setEnabled] = useState(true)
 
 useEffect(() => {
-    onUpdate({index, sign, number, enabled})
+    onUpdate({id, sign, number, enabled})
 },[number, sign, enabled])
 
 const handleNumChange = (event) => {
@@ -17,7 +17,7 @@ const handleSignChange = (event) => {
     setSign(event.target.value)
 }
 const handleRemove = () => {
-    onRemove(index)
+    onRemove(id)
 }
 const handleEnabled = () => {
     setEnabled((enabled) => !enabled)
